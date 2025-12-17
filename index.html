@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Spinning Shapes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>3D Spinning Shapes</h1>
+        
+        <div class="canvas-container">
+            <canvas id="shapeCanvas"></canvas>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="shapeSelector">Shape:</label>
+                <select id="shapeSelector">
+                    <option value="donut">Donut</option>
+                    <option value="sphere">Sphere</option>
+                    <option value="cube">Cube</option>
+                    <option value="pyramid">Pyramid</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="sizeControl">Size: <span id="sizeValue">1.0</span></label>
+                <input type="range" id="sizeControl" min="0.5" max="2.0" step="0.1" value="1.0">
+            </div>
+            
+            <div class="control-group">
+                <label for="speedXControl">X Rotation Speed: <span id="speedXValue">0.01</span></label>
+                <input type="range" id="speedXControl" min="0" max="0.05" step="0.001" value="0.01">
+            </div>
+            
+            <div class="control-group">
+                <label for="speedYControl">Y Rotation Speed: <span id="speedYValue">0.02</span></label>
+                <input type="range" id="speedYControl" min="0" max="0.05" step="0.001" value="0.02">
+            </div>
+            
+            <div class="control-group">
+                <label for="speedZControl">Z Rotation Speed: <span id="speedZValue">0.005</span></label>
+                <input type="range" id="speedZControl" min="0" max="0.05" step="0.001" value="0.005">
+            </div>
+            
+            <div class="control-group">
+                <label for="resolutionControl">Resolution: <span id="resolutionValue">30</span></label>
+                <input type="range" id="resolutionControl" min="10" max="50" step="1" value="30">
+            </div>
+            
+            <div class="control-group">
+                <label for="colorControl">Color:</label>
+                <input type="color" id="colorControl" value="#ff6b6b">
+            </div>
+            
+            <button id="resetButton">Reset to Default</button>
+        </div>
+    </div>
+    
+    <script src="shapes.js"></script>
+    <script src="controls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
